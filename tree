@@ -1,0 +1,419 @@
+MAIN
+   MATLAB
+      INITM
+         FILES
+            EXIT *
+            OPEN *
+         PUTID
+         WSET
+      MATFN1
+         ERROR
+            GETERR
+               OPEN *
+         HILBER
+         RREF
+            WAXPY
+            WDIV
+               ERROR
+                  GETERR
+                     OPEN *
+            WSCAL
+               WMUL
+            WSET
+            WSWAP
+         RSET
+         WCOPY
+         WGECO
+            WAXPY
+            WDIV
+               ERROR
+                  GETERR
+                     OPEN *
+            WGEFA
+               WAXPY
+               WDIV
+                  ERROR
+                     GETERR
+                        OPEN *
+               WSCAL
+                  WMUL
+            WMUL
+            WRSCAL
+            WSIGN
+               WMUL
+         WGEDI
+            WAXPY
+            WDIV
+               ERROR
+                  GETERR
+                     OPEN *
+            WMUL
+            WSCAL
+               WMUL
+            WSWAP
+         WGEFA
+            WAXPY
+            WDIV
+               ERROR
+                  GETERR
+                     OPEN *
+            WSCAL
+               WMUL
+         WGESL
+            WAXPY
+            WDIV
+               ERROR
+                  GETERR
+                     OPEN *
+         WPOFA
+            WDIV
+               ERROR
+                  GETERR
+                     OPEN *
+         WSCAL
+            WMUL
+         WSET
+         WSWAP
+      MATFN2
+         COMQR3
+            WDIV
+               ERROR
+                  GETERR
+                     OPEN *
+            WSQRT
+         CORTH
+         ERROR
+            GETERR
+               OPEN *
+         HTRIBK
+         HTRIDI
+         IMTQL2
+         WATAN
+            ERROR
+               GETERR
+                  OPEN *
+            WDIV
+               ERROR
+                  GETERR
+                     OPEN *
+            WLOG
+               ERROR
+                  GETERR
+                     OPEN *
+         WAXPY
+         WCOPY
+         WDIV
+            ERROR
+               GETERR
+                  OPEN *
+         WLOG
+            ERROR
+               GETERR
+                  OPEN *
+         WMUL
+         WSCAL
+            WMUL
+         WSET
+         WSQRT
+      MATFN3
+         ERROR
+            GETERR
+               OPEN *
+         WCOPY
+         WRSCAL
+         WSVDC
+            RROT
+            RROTG
+            WAXPY
+            WDIV
+               ERROR
+                  GETERR
+                     OPEN *
+            WMUL
+            WRSCAL
+            WSCAL
+               WMUL
+            WSIGN
+               WMUL
+            WSWAP
+      MATFN4
+         ERROR
+            GETERR
+               OPEN *
+         STACK1
+            ERROR
+               GETERR
+                  OPEN *
+            WCOPY
+            WRSCAL
+         WCOPY
+         WQRDC
+            WAXPY
+            WDIV
+               ERROR
+                  GETERR
+                     OPEN *
+            WSCAL
+               WMUL
+            WSIGN
+               WMUL
+            WSWAP
+         WQRSL
+            WAXPY
+            WCOPY
+            WDIV
+               ERROR
+                  GETERR
+                     OPEN *
+         WSET
+         WSWAP
+      MATFN5
+         BASE
+         ERROR
+            GETERR
+               OPEN *
+         FILES
+            EXIT *
+            OPEN *
+         PLOT
+         PRINT
+            FILES
+               EXIT *
+               OPEN *
+            FORMZ
+            PRNTID
+         PUTID
+         RAT
+         RSET
+         SAVLOD
+         STACK1
+            ERROR
+               GETERR
+                  OPEN *
+            WCOPY
+            WRSCAL
+         STACKP
+            ERROR
+               GETERR
+                  OPEN *
+            FUNS
+               PRNTID
+            PRINT
+               FILES
+                  EXIT *
+                  OPEN *
+               FORMZ
+               PRNTID
+            PUTID
+            WCOPY
+            WSET
+         WCOPY
+      MATFN6
+         ERROR
+            GETERR
+               OPEN *
+         MAGIC
+            RSWAP
+         RSET
+         USER
+         WCOPY
+         WDIV
+            ERROR
+               GETERR
+                  OPEN *
+         WMUL
+         WSET
+      PARSE
+         CLAUSE
+            ERROR
+               GETERR
+                  OPEN *
+            GETSYM
+               GETCH
+               GETVAL
+                  GETCH
+               PRNTID
+            PUTID
+            STACKP
+               ERROR
+                  GETERR
+                     OPEN *
+               FUNS
+                  PRNTID
+               PRINT
+                  FILES
+                     EXIT *
+                     OPEN *
+                  FORMZ
+                  PRNTID
+               PUTID
+               WCOPY
+               WSET
+            WCOPY
+         COMAND
+            ERROR
+               GETERR
+                  OPEN *
+            FILES
+               EXIT *
+               OPEN *
+            FUNS
+               PRNTID
+            GETSYM
+               GETCH
+               GETVAL
+                  GETCH
+               PRNTID
+            PRNTID
+            STACKP
+               ERROR
+                  GETERR
+                     OPEN *
+               FUNS
+                  PRNTID
+               PRINT
+                  FILES
+                     EXIT *
+                     OPEN *
+                  FORMZ
+                  PRNTID
+               PUTID
+               WCOPY
+               WSET
+         ERROR
+            GETERR
+               OPEN *
+         EXPR
+            ERROR
+               GETERR
+                  OPEN *
+            GETSYM
+               GETCH
+               GETVAL
+                  GETCH
+               PRNTID
+            PUTID
+            STACK1
+               ERROR
+                  GETERR
+                     OPEN *
+               WCOPY
+               WRSCAL
+            STACK2
+               ERROR
+                  GETERR
+                     OPEN *
+               WAXPY
+               WCOPY
+               WDIV
+                  ERROR
+                     GETERR
+                        OPEN *
+               WMUL
+               WRSCAL
+               WSCAL
+                  WMUL
+         FACTOR
+            ERROR
+               GETERR
+                  OPEN *
+            FUNS
+               PRNTID
+            GETCH
+            GETLIN
+               EDIT
+               FILES
+                  EXIT *
+                  OPEN *
+               GETCH
+               PUTID
+               XCHAR
+            GETSYM
+               GETCH
+               GETVAL
+                  GETCH
+               PRNTID
+            PUTID
+            STACK1
+               ERROR
+                  GETERR
+                     OPEN *
+               WCOPY
+               WRSCAL
+            STACK2
+               ERROR
+                  GETERR
+                     OPEN *
+               WAXPY
+               WCOPY
+               WDIV
+                  ERROR
+                     GETERR
+                        OPEN *
+               WMUL
+               WRSCAL
+               WSCAL
+                  WMUL
+            STACKG
+               ERROR
+                  GETERR
+                     OPEN *
+               WCOPY
+         FILES
+            EXIT *
+            OPEN *
+         FUNS
+            PRNTID
+         GETLIN
+            EDIT
+            FILES
+               EXIT *
+               OPEN *
+            GETCH
+            PUTID
+            XCHAR
+         GETSYM
+            GETCH
+            GETVAL
+               GETCH
+            PRNTID
+         PROMPT
+         PUTID
+         STACKP
+            ERROR
+               GETERR
+                  OPEN *
+            FUNS
+               PRNTID
+            PRINT
+               FILES
+                  EXIT *
+                  OPEN *
+               FORMZ
+               PRNTID
+            PUTID
+            WCOPY
+            WSET
+         TERM
+            ERROR
+               GETERR
+                  OPEN *
+            GETSYM
+               GETCH
+               GETVAL
+                  GETCH
+               PRNTID
+            STACK2
+               ERROR
+                  GETERR
+                     OPEN *
+               WAXPY
+               WCOPY
+               WDIV
+                  ERROR
+                     GETERR
+                        OPEN *
+               WMUL
+               WRSCAL
+               WSCAL
+                  WMUL
