@@ -1,4 +1,274 @@
 #include "matlab.h"
+      SUBROUTINE WQRSL8(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
+     *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
+      INTEGER LDX,N,K,JOB,INFO
+      FLOAT XR(LDX,1),XI(LDX,1),QRAUXR(1),QRAUXI(1),YR(1),
+     *                 YI(1),QYR(1),QYI(1),QTYR(1),QTYI(1),BR(1),BI(1),
+     *                 RSDR(1),RSDI(1),XBR(1),XBI(1)
+#include "funcs.h"
+      INTEGER I,J,JJ,JU,KP1
+      FLOAT TR,TI,TEMPR,TEMPI
+      LOGICAL CB,CQY,CQTY,CR,CXB
+      FLOAT ZDUMR,ZDUMI
+      FLOAT CABS1
+      COMMON /WQRSLC/I,J,JJ,JU,KP1,TR,TI,TEMPR,TEMPI,
+     * CB,CQY,CQTY,CR,CXB
+      CABS1(ZDUMR,ZDUMI) = DABS(ZDUMR) + DABS(ZDUMI)
+C
+         IF (.NOT.CR .AND. .NOT.CXB) GO TO 280
+C 
+C           COMPUTE RSD OR XB AS REQUIRED.
+C 
+            DO 270 JJ = 1, JU
+               J = JU - JJ + 1
+               IF (CABS1(QRAUXR(J),QRAUXI(J)) .EQ. F_0)
+     *            GO TO 260
+                  TEMPR = XR(J,J)
+                  TEMPI = XI(J,J)
+                  XR(J,J) = QRAUXR(J)
+                  XI(J,J) = QRAUXI(J)
+                  IF (.NOT.CR) GO TO 240
+                     TR = -WDOTCR(N-J+1,XR(J,J),XI(J,J),1,RSDR(J),
+     *                            RSDI(J),1)
+                     TI = -WDOTCI(N-J+1,XR(J,J),XI(J,J),1,RSDR(J),
+     *                            RSDI(J),1)
+                     CALL WDIV(TR,TI,XR(J,J),XI(J,J),TR,TI)
+                     CALL WAXPY(N-J+1,TR,TI,XR(J,J),XI(J,J),1,RSDR(J),
+     *                          RSDI(J),1)
+  240             CONTINUE
+                  IF (.NOT.CXB) GO TO 250
+                     TR = -WDOTCR(N-J+1,XR(J,J),XI(J,J),1,XBR(J),
+     *                            XBI(J),1)
+                     TI = -WDOTCI(N-J+1,XR(J,J),XI(J,J),1,XBR(J),
+     *                            XBI(J),1)
+                     CALL WDIV(TR,TI,XR(J,J),XI(J,J),TR,TI)
+                     CALL WAXPY(N-J+1,TR,TI,XR(J,J),XI(J,J),1,XBR(J),
+     *                          XBI(J),1)
+  250             CONTINUE
+                  XR(J,J) = TEMPR
+                  XI(J,J) = TEMPI
+  260          CONTINUE
+  270       CONTINUE
+  280    CONTINUE
+      RETURN
+      END
+C
+      SUBROUTINE WQRSL7(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
+     *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
+      INTEGER LDX,N,K,JOB,INFO
+      FLOAT XR(LDX,1),XI(LDX,1),QRAUXR(1),QRAUXI(1),YR(1),
+     *                 YI(1),QYR(1),QYI(1),QTYR(1),QTYI(1),BR(1),BI(1),
+     *                 RSDR(1),RSDI(1),XBR(1),XBI(1)
+#include "funcs.h"
+      INTEGER I,J,JJ,JU,KP1
+      FLOAT TR,TI,TEMPR,TEMPI
+      LOGICAL CB,CQY,CQTY,CR,CXB
+      FLOAT ZDUMR,ZDUMI
+      FLOAT CABS1
+      COMMON /WQRSLC/I,J,JJ,JU,KP1,TR,TI,TEMPR,TEMPI,
+     * CB,CQY,CQTY,CR,CXB
+      CABS1(ZDUMR,ZDUMI) = DABS(ZDUMR) + DABS(ZDUMI)
+C
+         IF (.NOT.CB) GO TO 230
+C 
+C           COMPUTE B.
+C 
+            DO 210 JJ = 1, K
+               J = K - JJ + 1
+               IF (CABS1(XR(J,J),XI(J,J)) .NE. F_0) GO TO 190
+                  INFO = J
+C                 ......EXIT
+C           ......EXIT
+                  GO TO 220
+  190          CONTINUE
+               CALL WDIV(BR(J),BI(J),XR(J,J),XI(J,J),BR(J),BI(J))
+               IF (J .EQ. 1) GO TO 200
+                  TR = -BR(J)
+                  TI = -BI(J)
+                  CALL WAXPY(J-1,TR,TI,XR(1,J),XI(1,J),1,BR,BI,1)
+  200          CONTINUE
+  210       CONTINUE
+  220       CONTINUE
+  230    CONTINUE
+      RETURN
+      END
+C
+      SUBROUTINE WQRSL6(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
+     *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
+      INTEGER LDX,N,K,JOB,INFO
+      FLOAT XR(LDX,1),XI(LDX,1),QRAUXR(1),QRAUXI(1),YR(1),
+     *                 YI(1),QYR(1),QYI(1),QTYR(1),QTYI(1),BR(1),BI(1),
+     *                 RSDR(1),RSDI(1),XBR(1),XBI(1)
+#include "funcs.h"
+      INTEGER I,J,JJ,JU,KP1
+      FLOAT TR,TI,TEMPR,TEMPI
+      LOGICAL CB,CQY,CQTY,CR,CXB
+      FLOAT ZDUMR,ZDUMI
+      FLOAT CABS1
+      COMMON /WQRSLC/I,J,JJ,JU,KP1,TR,TI,TEMPR,TEMPI,
+     * CB,CQY,CQTY,CR,CXB
+      CABS1(ZDUMR,ZDUMI) = DABS(ZDUMR) + DABS(ZDUMI)
+C
+         IF (.NOT.CR) GO TO 180
+            DO 170 I = 1, K
+               RSDR(I) = F_0
+               RSDI(I) = F_0
+  170       CONTINUE
+  180    CONTINUE
+      RETURN
+C
+      END
+      SUBROUTINE WQRSL5(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
+     *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
+      INTEGER LDX,N,K,JOB,INFO
+      FLOAT XR(LDX,1),XI(LDX,1),QRAUXR(1),QRAUXI(1),YR(1),
+     *                 YI(1),QYR(1),QYI(1),QTYR(1),QTYI(1),BR(1),BI(1),
+     *                 RSDR(1),RSDI(1),XBR(1),XBI(1)
+#include "funcs.h"
+      INTEGER I,J,JJ,JU,KP1
+      FLOAT TR,TI,TEMPR,TEMPI
+      LOGICAL CB,CQY,CQTY,CR,CXB
+      FLOAT ZDUMR,ZDUMI
+      FLOAT CABS1
+      COMMON /WQRSLC/I,J,JJ,JU,KP1,TR,TI,TEMPR,TEMPI,
+     * CB,CQY,CQTY,CR,CXB
+      CABS1(ZDUMR,ZDUMI) = DABS(ZDUMR) + DABS(ZDUMI)
+C
+C        SET UP TO COMPUTE B, RSD, OR XB.
+C 
+         IF (CB) CALL WCOPY(K,QTYR,QTYI,1,BR,BI,1)
+         KP1 = K + 1
+         IF (CXB) CALL WCOPY(K,QTYR,QTYI,1,XBR,XBI,1)
+         IF (CR .AND. K .LT. N)
+     *      CALL WCOPY(N-K,QTYR(KP1),QTYI(KP1),1,RSDR(KP1),RSDI(KP1),1)
+         IF (.NOT.CXB .OR. KP1 .GT. N) GO TO 160
+            DO 150 I = KP1, N
+               XBR(I) = F_0
+               XBI(I) = F_0
+  150       CONTINUE
+  160    CONTINUE
+      RETURN
+      END
+C
+      SUBROUTINE WQRSL4(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
+     *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
+      INTEGER LDX,N,K,JOB,INFO
+      FLOAT XR(LDX,1),XI(LDX,1),QRAUXR(1),QRAUXI(1),YR(1),
+     *                 YI(1),QYR(1),QYI(1),QTYR(1),QTYI(1),BR(1),BI(1),
+     *                 RSDR(1),RSDI(1),XBR(1),XBI(1)
+#include "funcs.h"
+      INTEGER I,J,JJ,JU,KP1
+      FLOAT TR,TI,TEMPR,TEMPI
+      LOGICAL CB,CQY,CQTY,CR,CXB
+      FLOAT ZDUMR,ZDUMI
+      FLOAT CABS1
+      COMMON /WQRSLC/I,J,JJ,JU,KP1,TR,TI,TEMPR,TEMPI,
+     * CB,CQY,CQTY,CR,CXB
+      CABS1(ZDUMR,ZDUMI) = DABS(ZDUMR) + DABS(ZDUMI)
+C
+         IF (.NOT.CQTY) GO TO 140
+C 
+C           COMPUTE CTRANS(Q)*Y.
+C 
+            DO 130 J = 1, JU
+               IF (CABS1(QRAUXR(J),QRAUXI(J)) .EQ. F_0)
+     *            GO TO 120
+                  TEMPR = XR(J,J)
+                  TEMPI = XI(J,J)
+                  XR(J,J) = QRAUXR(J)
+                  XI(J,J) = QRAUXI(J)
+                  TR = -WDOTCR(N-J+1,XR(J,J),XI(J,J),1,QTYR(J),
+     *                         QTYI(J),1)
+                  TI = -WDOTCI(N-J+1,XR(J,J),XI(J,J),1,QTYR(J),
+     *                         QTYI(J),1)
+                  CALL WDIV(TR,TI,XR(J,J),XI(J,J),TR,TI)
+                  CALL WAXPY(N-J+1,TR,TI,XR(J,J),XI(J,J),1,QTYR(J),
+     *                       QTYI(J),1)
+                  XR(J,J) = TEMPR
+                  XI(J,J) = TEMPI
+  120          CONTINUE
+  130       CONTINUE
+  140    CONTINUE
+C 
+      RETURN
+      END
+C
+      SUBROUTINE WQRSL3(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
+     *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
+      INTEGER LDX,N,K,JOB,INFO
+      FLOAT XR(LDX,1),XI(LDX,1),QRAUXR(1),QRAUXI(1),YR(1),
+     *                 YI(1),QYR(1),QYI(1),QTYR(1),QTYI(1),BR(1),BI(1),
+     *                 RSDR(1),RSDI(1),XBR(1),XBI(1)
+#include "funcs.h"
+      INTEGER I,J,JJ,JU,KP1
+      FLOAT TR,TI,TEMPR,TEMPI
+      LOGICAL CB,CQY,CQTY,CR,CXB
+      FLOAT ZDUMR,ZDUMI
+      FLOAT CABS1
+      COMMON /WQRSLC/I,J,JJ,JU,KP1,TR,TI,TEMPR,TEMPI,
+     * CB,CQY,CQTY,CR,CXB
+      CABS1(ZDUMR,ZDUMI) = DABS(ZDUMR) + DABS(ZDUMI)
+C 
+C        SET UP TO COMPUTE QY OR QTY.
+C 
+         IF (CQY) CALL WCOPY(N,YR,YI,1,QYR,QYI,1)
+         IF (CQTY) CALL WCOPY(N,YR,YI,1,QTYR,QTYI,1)
+         IF (.NOT.CQY) GO TO 110
+C 
+C           COMPUTE QY.
+C 
+            DO 100 JJ = 1, JU
+               J = JU - JJ + 1
+               IF (CABS1(QRAUXR(J),QRAUXI(J)) .EQ. F_0)
+     *            GO TO 90
+                  TEMPR = XR(J,J)
+                  TEMPI = XI(J,J)
+                  XR(J,J) = QRAUXR(J)
+                  XI(J,J) = QRAUXI(J)
+                  TR = -WDOTCR(N-J+1,XR(J,J),XI(J,J),1,QYR(J),QYI(J),1)
+                  TI = -WDOTCI(N-J+1,XR(J,J),XI(J,J),1,QYR(J),QYI(J),1)
+                  CALL WDIV(TR,TI,XR(J,J),XI(J,J),TR,TI)
+                  CALL WAXPY(N-J+1,TR,TI,XR(J,J),XI(J,J),1,QYR(J),
+     *                       QYI(J),1)
+                  XR(J,J) = TEMPR
+                  XI(J,J) = TEMPI
+   90          CONTINUE
+  100       CONTINUE
+  110    CONTINUE
+      RETURN
+      END
+C
+      SUBROUTINE WQRSL2(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
+     *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
+      INTEGER LDX,N,K,JOB,INFO
+      FLOAT XR(LDX,1),XI(LDX,1),QRAUXR(1),QRAUXI(1),YR(1),
+     *                 YI(1),QYR(1),QYI(1),QTYR(1),QTYI(1),BR(1),BI(1),
+     *                 RSDR(1),RSDI(1),XBR(1),XBI(1)
+#include "funcs.h"
+      INTEGER I,J,JJ,JU,KP1
+      FLOAT TR,TI,TEMPR,TEMPI
+      LOGICAL CB,CQY,CQTY,CR,CXB
+      FLOAT ZDUMR,ZDUMI
+      FLOAT CABS1
+      COMMON /WQRSLC/I,J,JJ,JU,KP1,TR,TI,TEMPR,TEMPI,
+     * CB,CQY,CQTY,CR,CXB
+      CABS1(ZDUMR,ZDUMI) = DABS(ZDUMR) + DABS(ZDUMI)
+C 
+C     SET INFO FLAG.
+C
+      INFO = 0
+C 
+C     DETERMINE WHAT IS TO BE COMPUTED.
+C 
+      CQY = JOB/10000 .NE. 0
+      CQTY = MOD(JOB,10000) .NE. 0
+      CB = MOD(JOB,1000)/100 .NE. 0
+      CR = MOD(JOB,100)/10 .NE. 0
+      CXB = MOD(JOB,10) .NE. 0
+      JU = MIN0(K,N-1)
+      RETURN
+      END
+C
       SUBROUTINE WQRSL(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
      *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
       INTEGER LDX,N,K,JOB,INFO
@@ -146,27 +416,18 @@ C     /* FORTRAN DABS,DIMAG,MIN0,MOD */
 C 
 C     INTERNAL VARIABLES
 C 
+#include "funcs.h"
       INTEGER I,J,JJ,JU,KP1
-      FLOAT WDOTCR,WDOTCI,TR,TI,TEMPR,TEMPI
+      FLOAT TR,TI,TEMPR,TEMPI
       LOGICAL CB,CQY,CQTY,CR,CXB
-C 
       FLOAT ZDUMR,ZDUMI
       FLOAT CABS1
+      COMMON /WQRSLC/I,J,JJ,JU,KP1,TR,TI,TEMPR,TEMPI,
+     * CB,CQY,CQTY,CR,CXB
       CABS1(ZDUMR,ZDUMI) = DABS(ZDUMR) + DABS(ZDUMI)
-C 
-C     SET INFO FLAG.
 C
-#if 0 
-      INFO = 0
-C 
-C     DETERMINE WHAT IS TO BE COMPUTED.
-C 
-      CQY = JOB/10000 .NE. 0
-      CQTY = MOD(JOB,10000) .NE. 0
-      CB = MOD(JOB,1000)/100 .NE. 0
-      CR = MOD(JOB,100)/10 .NE. 0
-      CXB = MOD(JOB,10) .NE. 0
-      JU = MIN0(K,N-1)
+      CALL WQRSL2(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
+     *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
 C 
 C     SPECIAL ACTION WHEN N=1.
 C 
@@ -197,135 +458,18 @@ C
    70    CONTINUE
       GO TO 290
    80 CONTINUE
-C 
-C        SET UP TO COMPUTE QY OR QTY.
-C 
-         IF (CQY) CALL WCOPY(N,YR,YI,1,QYR,QYI,1)
-         IF (CQTY) CALL WCOPY(N,YR,YI,1,QTYR,QTYI,1)
-         IF (.NOT.CQY) GO TO 110
-C 
-C           COMPUTE QY.
-C 
-            DO 100 JJ = 1, JU
-               J = JU - JJ + 1
-               IF (CABS1(QRAUXR(J),QRAUXI(J)) .EQ. 0.0D0)
-     *            GO TO 90
-                  TEMPR = XR(J,J)
-                  TEMPI = XI(J,J)
-                  XR(J,J) = QRAUXR(J)
-                  XI(J,J) = QRAUXI(J)
-                  TR = -WDOTCR(N-J+1,XR(J,J),XI(J,J),1,QYR(J),QYI(J),1)
-                  TI = -WDOTCI(N-J+1,XR(J,J),XI(J,J),1,QYR(J),QYI(J),1)
-                  CALL WDIV(TR,TI,XR(J,J),XI(J,J),TR,TI)
-                  CALL WAXPY(N-J+1,TR,TI,XR(J,J),XI(J,J),1,QYR(J),
-     *                       QYI(J),1)
-                  XR(J,J) = TEMPR
-                  XI(J,J) = TEMPI
-   90          CONTINUE
-  100       CONTINUE
-  110    CONTINUE
-         IF (.NOT.CQTY) GO TO 140
-C 
-C           COMPUTE CTRANS(Q)*Y.
-C 
-            DO 130 J = 1, JU
-               IF (CABS1(QRAUXR(J),QRAUXI(J)) .EQ. F_0)
-     *            GO TO 120
-                  TEMPR = XR(J,J)
-                  TEMPI = XI(J,J)
-                  XR(J,J) = QRAUXR(J)
-                  XI(J,J) = QRAUXI(J)
-                  TR = -WDOTCR(N-J+1,XR(J,J),XI(J,J),1,QTYR(J),
-     *                         QTYI(J),1)
-                  TI = -WDOTCI(N-J+1,XR(J,J),XI(J,J),1,QTYR(J),
-     *                         QTYI(J),1)
-                  CALL WDIV(TR,TI,XR(J,J),XI(J,J),TR,TI)
-                  CALL WAXPY(N-J+1,TR,TI,XR(J,J),XI(J,J),1,QTYR(J),
-     *                       QTYI(J),1)
-                  XR(J,J) = TEMPR
-                  XI(J,J) = TEMPI
-  120          CONTINUE
-  130       CONTINUE
-  140    CONTINUE
-C 
-C        SET UP TO COMPUTE B, RSD, OR XB.
-C 
-         IF (CB) CALL WCOPY(K,QTYR,QTYI,1,BR,BI,1)
-         KP1 = K + 1
-         IF (CXB) CALL WCOPY(K,QTYR,QTYI,1,XBR,XBI,1)
-         IF (CR .AND. K .LT. N)
-     *      CALL WCOPY(N-K,QTYR(KP1),QTYI(KP1),1,RSDR(KP1),RSDI(KP1),1)
-         IF (.NOT.CXB .OR. KP1 .GT. N) GO TO 160
-            DO 150 I = KP1, N
-               XBR(I) = F_0
-               XBI(I) = F_0
-  150       CONTINUE
-  160    CONTINUE
-         IF (.NOT.CR) GO TO 180
-            DO 170 I = 1, K
-               RSDR(I) = F_0
-               RSDI(I) = F_0
-  170       CONTINUE
-  180    CONTINUE
-         IF (.NOT.CB) GO TO 230
-C 
-C           COMPUTE B.
-C 
-            DO 210 JJ = 1, K
-               J = K - JJ + 1
-               IF (CABS1(XR(J,J),XI(J,J)) .NE. F_0) GO TO 190
-                  INFO = J
-C                 ......EXIT
-C           ......EXIT
-                  GO TO 220
-  190          CONTINUE
-               CALL WDIV(BR(J),BI(J),XR(J,J),XI(J,J),BR(J),BI(J))
-               IF (J .EQ. 1) GO TO 200
-                  TR = -BR(J)
-                  TI = -BI(J)
-                  CALL WAXPY(J-1,TR,TI,XR(1,J),XI(1,J),1,BR,BI,1)
-  200          CONTINUE
-  210       CONTINUE
-  220       CONTINUE
-  230    CONTINUE
-         IF (.NOT.CR .AND. .NOT.CXB) GO TO 280
-C 
-C           COMPUTE RSD OR XB AS REQUIRED.
-C 
-            DO 270 JJ = 1, JU
-               J = JU - JJ + 1
-               IF (CABS1(QRAUXR(J),QRAUXI(J)) .EQ. F_0)
-     *            GO TO 260
-                  TEMPR = XR(J,J)
-                  TEMPI = XI(J,J)
-                  XR(J,J) = QRAUXR(J)
-                  XI(J,J) = QRAUXI(J)
-                  IF (.NOT.CR) GO TO 240
-                     TR = -WDOTCR(N-J+1,XR(J,J),XI(J,J),1,RSDR(J),
-     *                            RSDI(J),1)
-                     TI = -WDOTCI(N-J+1,XR(J,J),XI(J,J),1,RSDR(J),
-     *                            RSDI(J),1)
-                     CALL WDIV(TR,TI,XR(J,J),XI(J,J),TR,TI)
-                     CALL WAXPY(N-J+1,TR,TI,XR(J,J),XI(J,J),1,RSDR(J),
-     *                          RSDI(J),1)
-  240             CONTINUE
-                  IF (.NOT.CXB) GO TO 250
-                     TR = -WDOTCR(N-J+1,XR(J,J),XI(J,J),1,XBR(J),
-     *                            XBI(J),1)
-                     TI = -WDOTCI(N-J+1,XR(J,J),XI(J,J),1,XBR(J),
-     *                            XBI(J),1)
-                     CALL WDIV(TR,TI,XR(J,J),XI(J,J),TR,TI)
-                     CALL WAXPY(N-J+1,TR,TI,XR(J,J),XI(J,J),1,XBR(J),
-     *                          XBI(J),1)
-  250             CONTINUE
-                  XR(J,J) = TEMPR
-                  XI(J,J) = TEMPI
-  260          CONTINUE
-  270       CONTINUE
-  280    CONTINUE
+      CALL WQRSL3(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
+     *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
+      CALL WQRSL4(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
+     *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
+      CALL WQRSL5(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
+     *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
+      CALL WQRSL6(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
+     *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
+      CALL WQRSL7(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
+     *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
+      CALL WQRSL8(XR,XI,LDX,N,K,QRAUXR,QRAUXI,YR,YI,QYR,QYI,QTYR,
+     *                 QTYI,BR,BI,RSDR,RSDI,XBR,XBI,JOB,INFO)
   290 CONTINUE
-#endif
       RETURN
       END
-
-        

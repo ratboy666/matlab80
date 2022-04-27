@@ -1,0 +1,29 @@
+# build matlab for cp/m
+#
+s="base error clause comandm comqr3 flop pythag
+  wsqrt wdiv main putid wcopy eqid prntid
+  getch wset getsym getval files matlab funs
+  stackp print roundm formz urand parse getlin
+  edit xchar prompt expr term stack1 wrscal
+  stack2 factorm stackg waxpy wdotui wdotur
+  wmul wscal matfn1 hilber wswap wasum wpofa
+  wgesl wdotcr wdotci wgeco rref iwamax rset
+  wsign wgefa wgedi init matfn2 corth imtql2
+  wlog watan htribk htridi matfn3 wnrm2 wsvdc
+  rrot rrotg matfn4 wqrdc wqrsl matfn5 rat
+  savlod matfn6 magic user rswap plot"
+for f in $s; do
+  # run .f file through CPP, giving .for file
+  cpm cpp -"-P $f.f" >$f.for
+  # compile .for to .rel
+  f80 =$f
+  # remove .for
+  rm $f.for
+done
+# link to .prg (run with execute)
+plink-ii @matlab
+echo
+# remove .rel files (don't erase libraries)
+for f in $s; do
+  rm $f.rel
+done

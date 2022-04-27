@@ -1,0 +1,1077 @@
+
+                  MEMORY MAP FOR MATLAB.PRG                   
+
+  DEFINEd symbols:
+    .END.     E147
+
+  SECTION , Level=0, Load Address=0100
+
+  MAIN     :  Address=0100, Size=0019
+    .MAIN.    0100   MAIN      0100
+
+  MATLAB   :  Address=0119, Size=00EB
+    MATLAB    0119
+
+  PARSE    :  Address=0204, Size=0F59
+    PARSE     0204
+
+  "PARSE   :  Address=115D, Size=013E
+
+  FLOP     :  Address=129B, Size=0017
+    FLOP      129B
+
+  .OVLZ.   :  Address=12B2, Size=038F
+    .OVLY.    144E   .OVEX.    1478   .LOAD.    147D
+
+  .OVTB.   :  Address=1641, Size=051D (Common)
+    .INIT.    1B56
+
+  "MAIN    :  Address=1B5E, Size=0001 (Uninitialized)
+
+  VSTK     :  Address=1B5F, Size=2530 (Common) (Uninitialized)
+
+  RECU     :  Address=408F, Size=0186 (Common) (Uninitialized)
+
+  ALFS     :  Address=4215, Size=00D4 (Common) (Uninitialized)
+
+  IOP      :  Address=42E9, Size=0424 (Common) (Uninitialized)
+
+  COM      :  Address=470D, Size=011C (Common) (Uninitialized)
+
+  "MATLAB  :  Address=4829, Size=0031 (Uninitialized)
+
+  "FLOP    :  Address=485A, Size=000B (Uninitialized)
+
+  SECTION , Level=1, Overlay=1, Load Address=4865
+
+  COMAND   :  Address=4865, Size=0A2B
+    COMAND    4865
+
+  "COMAND  :  Address=5290, Size=046A
+
+  SECTION , Level=1, Overlay=2, Load Address=4865
+
+  CLAUSE   :  Address=4865, Size=0B89
+    CLAUSE    4865
+
+  "CLAUSE  :  Address=53EE, Size=00A8
+
+  SECTION , Level=1, Overlay=3, Load Address=4865
+
+  EXPR     :  Address=4865, Size=03AF
+    EXPR      4865
+
+  "EXPR    :  Address=4C14, Size=0055
+
+  SECTION , Level=1, Overlay=4, Load Address=4865
+
+  TERM     :  Address=4865, Size=0226
+    TERM      4865
+
+  "TERM    :  Address=4A8B, Size=004C
+
+  SECTION , Level=1, Overlay=5, Load Address=4865
+
+  FACTOR   :  Address=4865, Size=0D5C
+    FACTOR    4865
+
+  "FACTOR  :  Address=55C1, Size=0097
+
+  SECTION , Level=1, Overlay=6, Load Address=56FA
+
+  MATFN1   :  Address=56FA, Size=187A
+    MATFN1    56FA
+
+  "MATFN1  :  Address=6F74, Size=02DA
+
+  SECTION , Level=1, Overlay=7, Load Address=56FA
+
+  MATFN2   :  Address=56FA, Size=1447
+    MATFN2    56FA
+
+  "MATFN2  :  Address=6B41, Size=01C3
+
+  SECTION , Level=1, Overlay=8, Load Address=56FA
+
+  MATFN3   :  Address=56FA, Size=155C
+    MATFN3    56FA
+
+  "MATFN3  :  Address=6C56, Size=01AA
+
+  SECTION , Level=1, Overlay=9, Load Address=56FA
+
+  MATFN4   :  Address=56FA, Size=0FFA
+    MATFN4    56FA
+
+  "MATFN4  :  Address=66F4, Size=01A8
+
+  SECTION , Level=1, Overlay=10, Load Address=56FA
+
+  MATFN5   :  Address=56FA, Size=139C
+    MATFN5    56FA
+
+  "MATFN5  :  Address=6A96, Size=0161
+
+  SECTION , Level=1, Overlay=11, Load Address=56FA
+
+  MATFN6   :  Address=56FA, Size=1468
+    MATFN6    56FA
+
+  "MATFN6  :  Address=6B62, Size=0125
+
+  SECTION , Level=1, Overlay=12, Load Address=56FA
+
+  INITM    :  Address=56FA, Size=036C
+    INITM     56FA
+
+  "INITM   :  Address=5A66, Size=0103
+
+  SECTION , Level=0, Load Address=724E
+
+  WSVDCC   :  Address=724E, Size=008A (Common) (Uninitialized)
+
+  STCK2C   :  Address=72D8, Size=002E (Common) (Uninitialized)
+
+  WQRSLC   :  Address=7306, Size=001F (Common) (Uninitialized)
+
+  SECTION , Level=1, Overlay=13, Load Address=7325
+
+  RREF     :  Address=7325, Size=055D
+    RREF      7325
+
+  "RREF    :  Address=7882, Size=0079
+
+  SECTION , Level=1, Overlay=14, Load Address=7325
+
+  WGECO    :  Address=7325, Size=1166
+    WGECO     7325
+
+  "WGECO   :  Address=848B, Size=016A
+
+  SECTION , Level=1, Overlay=15, Load Address=7325
+
+  WGEFA    :  Address=7325, Size=0637
+    WGEFA     7325
+
+  "WGEFA   :  Address=795C, Size=0072
+
+  SECTION , Level=1, Overlay=16, Load Address=7325
+
+  WGEDI    :  Address=7325, Size=07D7
+    WGEDI     7325
+
+  "WGEDI   :  Address=7AFC, Size=00A4
+
+  SECTION , Level=1, Overlay=17, Load Address=7325
+
+  WGESL    :  Address=7325, Size=06D5
+    WGESL     7325
+
+  "WGESL   :  Address=79FA, Size=00AA
+
+  SECTION , Level=1, Overlay=18, Load Address=7325
+
+  WPOFA    :  Address=7325, Size=0389
+    WPOFA     7325
+
+  "WPOFA   :  Address=76AE, Size=006D
+
+  SECTION , Level=1, Overlay=19, Load Address=7325
+
+  COMQR3   :  Address=7325, Size=0010
+    COMQR3    7325
+
+  "COMQR3  :  Address=7335, Size=0071 (Uninitialized)
+
+  SECTION , Level=1, Overlay=20, Load Address=7325
+
+  CORTH    :  Address=7325, Size=0A49
+    CORTH     7325
+
+  "CORTH   :  Address=7D6E, Size=006C (Uninitialized)
+
+  SECTION , Level=1, Overlay=21, Load Address=7325
+
+  WATAN    :  Address=7325, Size=00EE
+    WATAN     7325
+
+  "WATAN   :  Address=7413, Size=002B
+
+  SECTION , Level=1, Overlay=22, Load Address=7325
+
+  WSVDC    :  Address=7325, Size=02EB
+    WSVDC     7325
+
+  "WSVDC   :  Address=7610, Size=0130 (Uninitialized)
+
+  SECTION , Level=1, Overlay=23, Load Address=7325
+
+  STACK1   :  Address=7325, Size=027B
+    STACK1    7325
+
+  "STACK1  :  Address=75A0, Size=006F
+
+  SECTION , Level=1, Overlay=24, Load Address=7325
+
+  STACK2   :  Address=7325, Size=09D2
+    STACK2    7325
+
+  "STACK2  :  Address=7CF7, Size=009D
+
+  SECTION , Level=1, Overlay=25, Load Address=7325
+
+  WQRDC    :  Address=7325, Size=0EBF
+    WQRDC     7325
+
+  "WQRDC   :  Address=81E4, Size=012A
+
+  SECTION , Level=1, Overlay=26, Load Address=7325
+
+  WQRSL    :  Address=7325, Size=04ED
+    WQRSL     7325
+
+  "WQRSL   :  Address=7812, Size=0185 (Uninitialized)
+
+  SECTION , Level=1, Overlay=27, Load Address=7325
+
+  STACKP   :  Address=7325, Size=0DC9
+    STACKP    7325
+
+  "STACKP  :  Address=80EE, Size=00C3
+
+  SECTION , Level=1, Overlay=28, Load Address=7325
+
+  STACKG   :  Address=7325, Size=08B1
+    STACKG    7325
+
+  "STACKG  :  Address=7BD6, Size=0083
+
+  SECTION , Level=1, Overlay=29, Load Address=7325
+
+  GETSYM   :  Address=7325, Size=0447
+    GETSYM    7325
+
+  "GETSYM  :  Address=776C, Size=0067
+
+  SECTION , Level=1, Overlay=30, Load Address=85F5
+
+  WSVDC1   :  Address=85F5, Size=0151
+    WSVDC1    85F5
+
+  "WSVDC1  :  Address=8746, Size=006F (Uninitialized)
+
+  SECTION , Level=1, Overlay=31, Load Address=85F5
+
+  WSVDC2   :  Address=85F5, Size=0DAA
+    WSVDC2    85F5
+
+  "WSVDC2  :  Address=939F, Size=011C
+
+  SECTION , Level=1, Overlay=32, Load Address=85F5
+
+  WSVDC3   :  Address=85F5, Size=08FD
+    WSVDC3    85F5
+
+  "WSVDC3  :  Address=8EF2, Size=00C1
+
+  SECTION , Level=1, Overlay=33, Load Address=85F5
+
+  WSVDC4   :  Address=85F5, Size=0448
+    WSVDC4    85F5
+
+  "WSVDC4  :  Address=8A3D, Size=00BB
+
+  SECTION , Level=1, Overlay=34, Load Address=85F5
+
+  WSVDC5   :  Address=85F5, Size=02EB
+    WSVDC5    85F5
+
+  "WSVDC5  :  Address=88E0, Size=0099
+
+  SECTION , Level=1, Overlay=35, Load Address=85F5
+
+  WSVDC6   :  Address=85F5, Size=1050
+    WSVDC6    85F5
+
+  "WSVDC6  :  Address=9645, Size=0114
+
+  SECTION , Level=1, Overlay=36, Load Address=85F5
+
+  STCK21   :  Address=85F5, Size=009A
+    STCK21    85F5
+
+  "STCK21  :  Address=868F, Size=0045
+
+  SECTION , Level=1, Overlay=37, Load Address=85F5
+
+  STCK22   :  Address=85F5, Size=0267
+    STCK22    85F5
+
+  "STCK22  :  Address=885C, Size=0069
+
+  SECTION , Level=1, Overlay=38, Load Address=85F5
+
+  STCK23   :  Address=85F5, Size=00DC
+    STCK23    85F5
+
+  "STCK23  :  Address=86D1, Size=0043
+
+  SECTION , Level=1, Overlay=39, Load Address=85F5
+
+  STCK24   :  Address=85F5, Size=00A6
+    STCK24    85F5
+
+  "STCK24  :  Address=869B, Size=0041
+
+  SECTION , Level=1, Overlay=40, Load Address=85F5
+
+  STCK25   :  Address=85F5, Size=00CE
+    STCK25    85F5
+
+  "STCK25  :  Address=86C3, Size=0051
+
+  SECTION , Level=1, Overlay=41, Load Address=85F5
+
+  STCK26   :  Address=85F5, Size=0329
+    STCK26    85F5
+
+  "STCK26  :  Address=891E, Size=007B
+
+  SECTION , Level=1, Overlay=42, Load Address=85F5
+
+  STCK27   :  Address=85F5, Size=0297
+    STCK27    85F5
+
+  "STCK27  :  Address=888C, Size=0044 (Uninitialized)
+
+  SECTION , Level=1, Overlay=43, Load Address=85F5
+
+  STCK28   :  Address=85F5, Size=0235
+    STCK28    85F5
+
+  "STCK28  :  Address=882A, Size=0058 (Uninitialized)
+
+  SECTION , Level=1, Overlay=44, Load Address=85F5
+
+  WQRSL2   :  Address=85F5, Size=00E8
+    WQRSL2    85F5
+
+  "WQRSL2  :  Address=86DD, Size=006E (Uninitialized)
+
+  SECTION , Level=1, Overlay=45, Load Address=85F5
+
+  WQRSL3   :  Address=85F5, Size=0472
+    WQRSL3    85F5
+
+  "WQRSL3  :  Address=8A67, Size=00E5
+
+  SECTION , Level=1, Overlay=46, Load Address=85F5
+
+  WQRSL4   :  Address=85F5, Size=0418
+    WQRSL4    85F5
+
+  "WQRSL4  :  Address=8A0D, Size=00D1
+
+  SECTION , Level=1, Overlay=47, Load Address=85F5
+
+  WQRSL5   :  Address=85F5, Size=01AD
+    WQRSL5    85F5
+
+  "WQRSL5  :  Address=87A2, Size=0098
+
+  SECTION , Level=1, Overlay=48, Load Address=85F5
+
+  WQRSL6   :  Address=85F5, Size=009C
+    WQRSL6    85F5
+
+  "WQRSL6  :  Address=8691, Size=0071 (Uninitialized)
+
+  SECTION , Level=1, Overlay=49, Load Address=85F5
+
+  WQRSL7   :  Address=85F5, Size=0201
+    WQRSL7    85F5
+
+  "WQRSL7  :  Address=87F6, Size=0093
+
+  SECTION , Level=1, Overlay=50, Load Address=85F5
+
+  WQRSL8   :  Address=85F5, Size=067F
+    WQRSL8    85F5
+
+  "WQRSL8  :  Address=8C74, Size=00EA
+
+  SECTION , Level=1, Overlay=51, Load Address=9759
+
+  WDIV     :  Address=9759, Size=0144
+    WDIV      9759
+
+  "WDIV    :  Address=989D, Size=003A (Uninitialized)
+
+  SECTION , Level=1, Overlay=52, Load Address=9759
+
+  WSCAL    :  Address=9759, Size=00A7
+    WSCAL     9759
+
+  "WSCAL   :  Address=9800, Size=0022 (Uninitialized)
+
+  SECTION , Level=1, Overlay=53, Load Address=9759
+
+  WSIGN    :  Address=9759, Size=0090
+    WSIGN     9759
+
+  "WSIGN   :  Address=97E9, Size=0026 (Uninitialized)
+
+  SECTION , Level=1, Overlay=54, Load Address=9759
+
+  WLOG     :  Address=9759, Size=009B
+    WLOG      9759
+
+  "WLOG    :  Address=97F4, Size=0017 (Uninitialized)
+
+  SECTION , Level=1, Overlay=55, Load Address=9759
+
+  PRINT    :  Address=9759, Size=0AC2
+    PRINT     9759
+
+  "PRINT   :  Address=A21B, Size=0282
+
+  SECTION , Level=1, Overlay=56, Load Address=9759
+
+  MAGIC    :  Address=9759, Size=0653
+    MAGIC     9759
+
+  "MAGIC   :  Address=9DAC, Size=0058
+
+  SECTION , Level=1, Overlay=57, Load Address=9759
+
+  GETLIN   :  Address=9759, Size=04B2
+    GETLIN    9759
+
+  "GETLIN  :  Address=9C0B, Size=008C
+
+  SECTION , Level=1, Overlay=58, Load Address=9759
+
+  GETVAL   :  Address=9759, Size=004E
+    GETVAL    9759
+
+  "GETVAL  :  Address=97A7, Size=0031 (Uninitialized)
+
+  SECTION , Level=1, Overlay=59, Load Address=9759
+
+  WNRM2    :  Address=9759, Size=00B2
+    WNRM2     9759
+
+  "WNRM2   :  Address=980B, Size=0049 (Uninitialized)
+
+  SECTION , Level=1, Overlay=60, Load Address=A49D
+
+  FILES    :  Address=A49D, Size=013F
+    FILES     A49D
+
+  "FILES   :  Address=A5DC, Size=0087
+
+  SECTION , Level=1, Overlay=61, Load Address=A49D
+
+  PUTID    :  Address=A49D, Size=003A
+    PUTID     A49D
+
+  "PUTID   :  Address=A4D7, Size=000A (Uninitialized)
+
+  SECTION , Level=1, Overlay=62, Load Address=A49D
+
+  WSET     :  Address=A49D, Size=008F
+    WSET      A49D
+
+  "WSET    :  Address=A52C, Size=0018 (Uninitialized)
+
+  SECTION , Level=1, Overlay=63, Load Address=A49D
+
+  ERROR    :  Address=A49D, Size=016C
+    ERROR     A49D
+
+  "ERROR   :  Address=A609, Size=0041
+
+  GETERR   :  Address=A64A, Size=00D8
+    GETERR    A64A
+
+  "GETERR  :  Address=A722, Size=0025
+
+  SECTION , Level=1, Overlay=64, Load Address=A49D
+
+  HILBER   :  Address=A49D, Size=0262
+    HILBER    A49D
+
+  "HILBER  :  Address=A6FF, Size=0036 (Uninitialized)
+
+  SECTION , Level=1, Overlay=65, Load Address=A49D
+
+  WAXPY    :  Address=A49D, Size=01EB
+    WAXPY     A49D
+
+  "WAXPY   :  Address=A688, Size=0039 (Uninitialized)
+
+  SECTION , Level=1, Overlay=66, Load Address=A49D
+
+  WMUL     :  Address=A49D, Size=0092
+    WMUL      A49D
+
+  "WMUL    :  Address=A52F, Size=001E (Uninitialized)
+
+  SECTION , Level=1, Overlay=67, Load Address=A49D
+
+  WSWAP    :  Address=A49D, Size=016B
+    WSWAP     A49D
+
+  "WSWAP   :  Address=A608, Size=0026 (Uninitialized)
+
+  SECTION , Level=1, Overlay=68, Load Address=A49D
+
+  RSET     :  Address=A49D, Size=00AB
+    RSET      A49D
+
+  "RSET    :  Address=A548, Size=0010 (Uninitialized)
+
+  SECTION , Level=1, Overlay=69, Load Address=A49D
+
+  WCOPY    :  Address=A49D, Size=0123
+    WCOPY     A49D
+
+  "WCOPY   :  Address=A5C0, Size=001E (Uninitialized)
+
+  SECTION , Level=1, Overlay=70, Load Address=A49D
+
+  WRSCAL   :  Address=A49D, Size=00CB
+    WRSCAL    A49D
+
+  "WRSCAL  :  Address=A568, Size=0045 (Uninitialized)
+
+  SECTION , Level=1, Overlay=71, Load Address=A49D
+
+  WSQRT    :  Address=A49D, Size=011E
+    WSQRT     A49D
+
+  "WSQRT   :  Address=A5BB, Size=004B (Uninitialized)
+
+  SECTION , Level=1, Overlay=72, Load Address=A49D
+
+  HTRIBK   :  Address=A49D, Size=0505
+    HTRIBK    A49D
+
+  "HTRIBK  :  Address=A9A2, Size=0058 (Uninitialized)
+
+  SECTION , Level=1, Overlay=73, Load Address=A49D
+
+  HTRIDI   :  Address=A49D, Size=0FFC
+    HTRIDI    A49D
+
+  "HTRIDI  :  Address=B499, Size=0090 (Uninitialized)
+
+  SECTION , Level=1, Overlay=74, Load Address=A49D
+
+  IMTQL2   :  Address=A49D, Size=0922
+    IMTQL2    A49D
+
+  "IMTQL2  :  Address=ADBF, Size=008A (Uninitialized)
+
+  SECTION , Level=1, Overlay=75, Load Address=A49D
+
+  RROT     :  Address=A49D, Size=017E
+    RROT      A49D
+
+  "RROT    :  Address=A61B, Size=0036 (Uninitialized)
+
+  SECTION , Level=1, Overlay=76, Load Address=A49D
+
+  RROTG    :  Address=A49D, Size=018F
+    RROTG     A49D
+
+  "RROTG   :  Address=A62C, Size=002B (Uninitialized)
+
+  SECTION , Level=1, Overlay=77, Load Address=A49D
+
+  BASE     :  Address=A49D, Size=03B4
+    BASE      A49D
+
+  "BASE    :  Address=A851, Size=0026 (Uninitialized)
+
+  SECTION , Level=1, Overlay=78, Load Address=A49D
+
+  PLOT     :  Address=A49D, Size=0365
+    PLOT      A49D
+
+  "PLOT    :  Address=A802, Size=008E
+
+  SECTION , Level=1, Overlay=79, Load Address=A49D
+
+  FORMZ    :  Address=A49D, Size=0066
+    FORMZ     A49D
+
+  "FORMZ   :  Address=A503, Size=0011
+
+  SECTION , Level=1, Overlay=80, Load Address=A49D
+
+  PRNTID   :  Address=A49D, Size=01A5
+    PRNTID    A49D
+
+  "PRNTID  :  Address=A642, Size=0053
+
+  SECTION , Level=1, Overlay=81, Load Address=A49D
+
+  RAT      :  Address=A49D, Size=020C
+    RAT       A49D
+
+  "RAT     :  Address=A6A9, Size=0067
+
+  SECTION , Level=1, Overlay=82, Load Address=A49D
+
+  SAVLOD   :  Address=A49D, Size=0319
+    SAVLOD    A49D
+
+  "SAVLOD  :  Address=A7B6, Size=0052
+
+  SECTION , Level=1, Overlay=83, Load Address=A49D
+
+  RSWAP    :  Address=A49D, Size=0124
+    RSWAP     A49D
+
+  "RSWAP   :  Address=A5C1, Size=001C (Uninitialized)
+
+  SECTION , Level=1, Overlay=84, Load Address=A49D
+
+  USER     :  Address=A49D, Size=009A
+    USER      A49D
+
+  "USER    :  Address=A537, Size=0026
+
+  SECTION , Level=1, Overlay=85, Load Address=A49D
+
+  EQID     :  Address=A49D, Size=004F
+    EQID      A49D
+
+  "EQID    :  Address=A4EC, Size=0015 (Uninitialized)
+
+  SECTION , Level=1, Overlay=86, Load Address=A49D
+
+  FUNS     :  Address=A49D, Size=0116
+    FUNS      A49D
+
+  "FUNS    :  Address=A5B3, Size=018E
+
+  SECTION , Level=1, Overlay=87, Load Address=A49D
+
+  PROMPT   :  Address=A49D, Size=0062
+    PROMPT    A49D
+
+  "PROMPT  :  Address=A4FF, Size=0016
+
+  SECTION , Level=1, Overlay=88, Load Address=A49D
+
+  WASUM    :  Address=A49D, Size=00C2
+    WASUM     A49D
+
+  "WASUM   :  Address=A55F, Size=002C (Uninitialized)
+
+  SECTION , Level=1, Overlay=89, Load Address=A49D
+
+  GETCH    :  Address=A49D, Size=002E
+    GETCH     A49D
+
+  "GETCH   :  Address=A4CB, Size=0031 (Uninitialized)
+
+  SECTION , Level=1, Overlay=90, Load Address=A49D
+
+  EDIT     :  Address=A49D, Size=0008
+    EDIT      A49D
+
+  "EDIT    :  Address=A4A5, Size=0005 (Uninitialized)
+
+  SECTION , Level=1, Overlay=91, Load Address=A49D
+
+  IWAMAX   :  Address=A49D, Size=00F0
+    IWAMAX    A49D
+
+  "IWAMAX  :  Address=A58D, Size=002A (Uninitialized)
+
+  SECTION , Level=1, Overlay=92, Load Address=A49D
+
+  WDOTCR   :  Address=A49D, Size=0168
+    WDOTCR    A49D
+
+  "WDOTCR  :  Address=A605, Size=0038 (Uninitialized)
+
+  SECTION , Level=1, Overlay=93, Load Address=A49D
+
+  PYTHAG   :  Address=A49D, Size=0180
+    PYTHAG    A49D
+
+  "PYTHAG  :  Address=A61D, Size=0057
+
+  SECTION , Level=1, Overlay=94, Load Address=A49D
+
+  XCHAR    :  Address=A49D, Size=0008
+    XCHAR     A49D
+
+  "XCHAR   :  Address=A4A5, Size=0005 (Uninitialized)
+
+  SECTION , Level=1, Overlay=95, Load Address=A49D
+
+  ROUNDM   :  Address=A49D, Size=0161
+    ROUNDM    A49D
+
+  "ROUNDM  :  Address=A5FE, Size=0020
+
+  SECTION , Level=1, Overlay=96, Load Address=A49D
+
+  URAND    :  Address=A49D, Size=01CE
+    URAND     A49D
+
+  "URAND   :  Address=A66B, Size=0028
+
+  SECTION , Level=1, Overlay=97, Load Address=A49D
+
+  WDOTCI   :  Address=A49D, Size=0172
+    WDOTCI    A49D
+
+  "WDOTCI  :  Address=A60F, Size=0034 (Uninitialized)
+
+  SECTION , Level=1, Overlay=98, Load Address=A49D
+
+  WDOTUI   :  Address=A49D, Size=0172
+    WDOTUI    A49D
+
+  "WDOTUI  :  Address=A60F, Size=0034 (Uninitialized)
+
+  SECTION , Level=1, Overlay=99, Load Address=A49D
+
+  WDOTUR   :  Address=A49D, Size=0168
+    WDOTUR    A49D
+
+  "WDOTUR  :  Address=A605, Size=0038 (Uninitialized)
+
+  SECTION , Level=0, Overlay=100, Load Address=B529
+
+  INT4     :  Address=B529, Size=038F
+    $AY       B529   $A1       B52C   $SY       B53F   $S1       B542
+    $N1       B55A   $L4       B57E   $T4       B589   $MY       B595
+    $M1       B598   $DY       B602   $D1       B608   $EY       B698
+    $E1       B69B   $AV       B78B   $SV       B791   $MV       B797
+    $DV       B79D   $EV       B7A3   $AE       B7A9   $SE       B7AF
+    $ME       B7B5   $DE       B7BB   $EE       B7C1   $CL       B7DD
+    $C0       B7E0   $C4       B866   $C5       B86A   $C6       B870
+    $C7       B874   $CD       B8A0
+
+  DSIGN    :  Address=B8B8, Size=001B
+    DSIGN     B8B8
+
+  DATAN2   :  Address=B8D3, Size=0079
+    DATAN2    B8D3
+
+  DATAN    :  Address=B94C, Size=00AA
+    DATAN     B995   $DTANA    B9B3
+
+  DCOS     :  Address=B9F6, Size=000C
+    DCOS      B9F6
+
+  DSIN     :  Address=BA02, Size=0087
+    DSIN      BA02   $DSIN1    BA05
+
+  DBLEXP   :  Address=BA89, Size=0072
+    $ER       BA89   $EQ       BA97   $EU       BAA5
+
+  DEXP     :  Address=BAFB, Size=00C1
+    DEXP      BB35   $DEXP1    BB38
+
+  DLOG     :  Address=BBBC, Size=008F
+    DLOG      BBBC
+
+  DCOMP    :  Address=BC4B, Size=003A
+    $DCMP0    BC4B   $DCOMP    BC4E
+
+  DBLDIV   :  Address=BC85, Size=0086
+    $DR       BC85   $DQ       BC93   $DIVF     BC9E   $DU       BCA1
+    $DDIV0    BCAE
+
+  DBLFLR   :  Address=BD0B, Size=003D
+    $DFLR     BD0B
+
+  DBLPLY   :  Address=BD48, Size=003C
+    $DPLX     BD48   $DPLY     BD5D
+
+  DBLUTL   :  Address=BD84, Size=02A0
+    $XARAC    BD84   $MMF      BD9A   $T3       BD9A   $MAF      BDA1
+    $MFA      BDA7   $DNGR     BDAD   $DNGR0    BDB0   $DPHA     BDB5
+    $DPHF     BDBB   $DPPA     BDCC   $DPPF     BDD2   $SQF      BDE3
+    $XTF      BDE9   $MU       BDFA   $DTP12    BE40   $DSQR3    BE48
+    $DPIO2    BE50   $DPIO6    BE58   $DONE     BE60   $MR       BE68
+    $MQ       BE76   $MULF     BE7E   $DOVF     BE84   $DF2      BEA2
+    $DF2PI    BEAA   $DF4      BEB2   $DM2      BEBA   $DSQR2    BEC2
+    $DLNS2    BECA   $DLOG2    BED2   $DPI      BEDA   $SU       BEE2
+    $AU       BEF2   $DRND     BF41   $DRNDA    BF55   $AUADD    BF69
+    $AUADS    BF6F   $AUSS     BF7C   $DNRML    BFA2   $DSHFC    BFDE
+    $DSHFL    BFE0   $AR       BFE9   $AQ       BFF7   $ADDF     BFFF
+    $SR       C005   $SQ       C013   $SUBF     C01E
+
+  DMLDV    :  Address=C024, Size=0017
+    $DMLDV    C024
+
+  DSHR     :  Address=C03B, Size=0034
+    $DSHR     C03B   $DSHRM    C043   $DSHRB    C067
+
+  DBLCON   :  Address=C06F, Size=003E
+    $CC       C06F   DBLE      C075   $CK       C078   $CZ       C087
+    IDINT     C08C   $CX       C08F   SNGL      C095   $CY       C098
+    $CJ       C0A8
+
+  MFM      :  Address=C0AD, Size=001D
+    $MVARG    C0AD   $MVRG0    C0B0   $MFM      C0C4   $L3       C0C4
+
+  MIN0     :  Address=C0CA, Size=000E
+    MIN0      C0CA   $MIN00    C0CD
+
+  SQRT     :  Address=C0D8, Size=003D
+    SQRT      C0D8
+
+  MAX0     :  Address=C115, Size=0017
+    MAX0      C115   $MAX00    C118   $MAX01    C119
+
+  IFIX     :  Address=C12C, Size=0048
+    $CH       C12C   IFIX      C12F   INT       C12F   $IFIXA    C132
+
+  COSIN    :  Address=C174, Size=0071
+    COS       C174   SIN       C180   $FR2      C1C8
+
+  ATAN     :  Address=C1E5, Size=0088
+    ATAN      C1E5   $ATANA    C207   $PIO2     C261   $FONE     C269
+
+  AMOD     :  Address=C26D, Size=0026
+    AMOD      C26D
+
+  AMIN1    :  Address=C293, Size=000B
+    AMIN1     C293   $AMINA    C296
+
+  AMAX1    :  Address=C29E, Size=001C
+    AMAX1     C29E   $AMAXA    C2A1   $AMAXB    C2A2
+
+  AINT     :  Address=C2BA, Size=0012
+    AINT      C2BA   $AINT1    C2BD
+
+  ABS      :  Address=C2CC, Size=0007
+    ABS       C2CC
+
+  ALOG10   :  Address=C2D3, Size=000F
+    ALOG10    C2D3
+
+  ALOG     :  Address=C2E2, Size=000F
+    ALOG      C2E2
+
+  MOD      :  Address=C2F1, Size=0018
+    MOD       C2F1
+
+  RIEXP    :  Address=C309, Size=0052
+    $EA       C309
+
+  NEGF     :  Address=C35B, Size=000C
+    $NEGF     C35B
+
+  RREXP    :  Address=C367, Size=0053
+    $EB       C367   $EB3      C3A6   $EB5      C3AB
+
+  NEG      :  Address=C3BA, Size=000E
+    $EB4      C3BA   $NU       C3BA   $NB       C3BA
+
+  EXPB     :  Address=C3C8, Size=005D
+    $EXPB     C3C8
+
+  LOG2     :  Address=C425, Size=004C
+    $LOG2     C425   $LOG20    C428   $LOG21    C42F
+
+  POLY     :  Address=C471, Size=0039
+    $PLX      C471   $PLY      C485
+
+  FADD     :  Address=C4AA, Size=0075
+    $AA       C4AA   $AB       C4B0   $AB00     C4B3   $AB0      C4B6
+    $SA       C50C   $SB       C512   $SB00     C515   $SB0      C518
+
+  FDIV     :  Address=C51F, Size=008C
+    $DA       C51F   $DB       C525   $DB01     C528   $DB0      C52B
+    $DB02     C52E   $DB00     C52F
+
+  STOP     :  Address=C5AB, Size=0072
+    $PA       C5AB   $ST       C5FD
+
+  FMUL     :  Address=C61D, Size=005E
+    $MA       C61D   $MB       C623   $MB01     C626   $MB0      C629
+    $MB02     C62C   $MB00     C62D
+
+  ADE      :  Address=C67B, Size=0020
+    $ADE      C67B
+
+  FLR      :  Address=C69B, Size=003A
+    $FLR      C69B   $FLR0     C69E
+
+  FCP      :  Address=C6D5, Size=002E
+    $FCP      C6D5
+
+  FLT      :  Address=C703, Size=0020
+    $FLT      C703   $CA       C703   $FRH      C715
+
+  CMPGTO   :  Address=C723, Size=0023
+    $CG       C723
+
+  IDIV     :  Address=C746, Size=0027
+    $D9       C746   $D99      C74C   $D90      C769
+
+  RAT      :  Address=C76D, Size=0012
+    $RAT      C76D
+
+  DAT      :  Address=C77F, Size=0010
+    $DAT      C77F
+
+  IABS     :  Address=C78F, Size=000C
+    IABS      C78F
+
+  NEGATE   :  Address=C79B, Size=001C
+    $NGD      C79B   $NGR      C7A3   $NGR1     C7A9   $NGR0     C7AE
+
+  XAR      :  Address=C7B7, Size=0009
+    $XAR      C7B7
+
+  FAT2     :  Address=C7C0, Size=0008
+    $FAT2     C7C0
+
+  IMUL     :  Address=C7C8, Size=001B
+    $M9       C7C8   $M90      C7CF
+
+  UNPACK   :  Address=C7E3, Size=0015
+    $UPK      C7E3   $UPK0     C7F0
+
+  PSPLAC   :  Address=C7F8, Size=0015
+    $PHA      C7F8   $PPA      C802
+
+  ICP      :  Address=C80D, Size=0014
+    $ICP      C80D
+
+  FORMIO   :  Address=C821, Size=0DAD
+    $I0       C821   $I1       C828   $I2       C82F   $I3       C836
+    $I4       C83D   $OD       C872   $OE       C875   $R5       C884
+    $W5       C88C   $R2       C894   $W2       C897   $ADJRG    C9DA
+    $BA       CFF2   $EN       CFF7   $RE       CFFC   $MJARG    D04D
+    $ND       D067   $RED      D2A5   $SHJL1    D330   $SHAL4    D33F
+    $WRI      D526
+
+  NORM     :  Address=D5CE, Size=0092
+    $NRL      D5CE   $NOR      D5EB   $NOR0     D615
+
+  SHIFT    :  Address=D660, Size=001B
+    $SHJR1    D660   $SHJR4    D671   $SHJ41    D673
+
+  RNDOVF   :  Address=D67B, Size=0030
+    $OVF      D67B   $OVF0     D67F   $RND      D68C   $RND0     D694
+    $RND1     D69E
+
+  ZAC      :  Address=D6AB, Size=000B
+    $ZAC0     D6AB   $ZAC      D6AC
+
+  IOINIT   :  Address=D6B6, Size=002E
+    $IOINI    D6B6
+
+  LUNTB    :  Address=D6E4, Size=0015
+    $LUNTB    D6E4
+
+  IAT2     :  Address=D6F9, Size=000B
+    $IAT2     D6F9
+
+  LODSTR   :  Address=D704, Size=003F
+    $T1       D704   $MAM      D713   $FAT      D713   $L1       D713
+    $MAR      D71C   $MAR0     D71F   $MRA      D72A   $MRM      D734
+    $MRM1     D73C
+
+  SAF      :  Address=D743, Size=0010
+    $SAF      D743   $SAF0     D748   $SAF1     D74B
+
+  DIV      :  Address=D753, Size=0029
+    $DIV      D753
+
+  IDV      :  Address=D77C, Size=0034
+    $IDV      D77C
+
+  SHR      :  Address=D7B0, Size=0024
+    $SHR      D7B0   $SHR0     D7B2   $SHR1     D7C6
+
+  ARGTRN   :  Address=D7D4, Size=006A
+    $AT       D7D4   $ATI      D7E6   $ATR      D7FA
+
+  DSKDRV   :  Address=D83E, Size=03DE
+    DSKDRV    D847   OPEN      DBDC
+
+  "DSKDRV  :  Address=DC1C, Size=0041
+    $FLFLG    DC1C   $DSKER    DC58   $MEMRY    DC5B
+
+  LPTDRV   :  Address=DC5D, Size=00A2
+    LPTDRV    DC5D
+
+  "LPTDRV  :  Address=DCFF, Size=0003
+    $OPNFL    DCFF
+
+  TTYDRV   :  Address=DD02, Size=0130
+    PUNRDR    DD02   TTYDRV    DD10   PUNCH     DDB0   CONOUT    DDBE
+    READER    DDC2   HOME      DDDF   SCREEN    DDE4   GOTOXY    DDFD
+    INKEY     DE1E
+
+  "TTYDRV  :  Address=DE32, Size=0001
+
+  ERR      :  Address=DE33, Size=00DE
+    $IOERR    DE4A   $ERR      DE50   $FATAL    DE8D
+
+  INIT     :  Address=DF11, Size=002B
+    $INIT     DF11
+
+  EXIT     :  Address=DF3C, Size=0016
+    $EX       DF3C   $EXIT     DF3C   EXIT      DF3C
+
+  "EXIT    :  Address=DF52, Size=0002
+    $CLSFL    DF52
+
+  CPMIO    :  Address=DF54, Size=0040
+    $TTYOT    DF54   $TTYIN    DF63
+
+  "CPMIO   :  Address=DF94, Size=008C
+    $CPMBF    DF94   $LINBF    DF96   $LNPTR    E01E
+
+  "FORDAT  :  Address=E020, Size=007A
+    $$A1      E020   $A2       E021   $A3       E023   $$AA      E024
+    $AD       E026   $AS       E028   $BE       E02A   $BF       E02B
+    $BL       E02D   $$CD      E02F   $CT       E031   $DC       E045
+    $DCOF     E046   $DD       E047   $$DE      E048   $DF       E049
+    $DL       E04A   $DP       E04B   $$DR      E04D   $$DV      E04E
+    $DW       E050   $EF       E051   $EFLG     E052   $FC       E053
+    $FL       E054   $$ER      E056   $$EN      E058   $REC      E05A
+    $KEY      E05C   $FP       E05E   $FW       E060   $GF       E061
+    $$I1      E062   $$I2      E064   $IM0      E066   $IM1      E067
+    $J1       E068   $J2       E069   $J3       E06A   $J4       E06B
+    $J5       E06C   $J6       E06D   $J7       E06E   $J8       E06F
+    $MF       E070   $OPT      E071   $PB       E072   $PL       E073
+    $POS      E075   $POS2     E077   $PR       E079   $PS       E07B
+    $RC       E07D   $SF       E07F   $SG       E080   $SK       E081
+    $SW       E083   $TC       E084   $TS       E085   $UN       E086
+    $DAC0     E087   $DAC      E088   $AC0      E08B   $AC       E08C
+    $AC2      E08E   $AC3      E08F   $AC4      E090   $ARG0     E091
+    $ARG      E092   $ARG2     E098   $ARG3     E099
+
+  DTBF     :  Address=E09A, Size=0004
+    $FORLN    E09A   $UFMLN    E09C
+
+  "INT4    :  Address=E09E, Size=0011 (Uninitialized)
+
+  "FORMIO  :  Address=E0AF, Size=0002 (Uninitialized)
+
+  "INIT    :  Address=E0B1, Size=0005 (Uninitialized)
+    $CPMVN    E0B1   $CPMRF    E0B2   $CPMWF    E0B3   $EC       E0B4
+    $IOFLG    E0B5
+
+  FORDAT   :  Address=E0B6, Size=0000 (Uninitialized)
+
+  "DTBF    :  Address=E0B6, Size=0091 (Uninitialized)
+    $DTBF     E0B6   $DTBF1    E0B7   $DTBF3    E0B9   $DTBF5    E0BB
+    $DTBF7    E0BD   $DTBF8    E0BE   $DTBFA    E0C6
+                                                          
